@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WeatherActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="#e21212">
+
+        <ImageView
+            android:id="@+id/home_page"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/w2"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/w_title"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+
+            android:text="天气预报"
+            android:textSize="22dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp" />
+
+        <ImageView
+            android:id="@+id/position"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/w1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="230dp" />
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/w3"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="280dp" />
+        <ImageView
+            android:id="@+id/refresh"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/w4"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="330dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/w6">
+
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:text="北京"
+            android:textColor="#FFFFFFFF"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/pm"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/city"
+            android:layout_marginRight="116dp"
+            android:text="PM2.5 "
+            android:textColor="#FFFFFFFF"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/pm_values"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignLeft="@+id/pm"
+            android:layout_below="@+id/pm"
+            android:text="25"
+            android:textColor="#FFFFFFFF"
+            android:textSize="35sp" />
+
+        <ImageView
+            android:id="@+id/w7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/city"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/w7" />
+
+        <TextView
+            android:id="@+id/time.value"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/city"
+            android:layout_alignLeft="@+id/city"
+            android:text="20:15 "
+            android:textColor="#FFFFFFFF"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/fabu"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/city"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="84dp"
+            android:layout_marginStart="84dp"
+            android:text=" 发布"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/shidu"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/city"
+            android:layout_below="@+id/city"
+            android:text="湿 度："
+            android:textColor="#FFFFFFFF"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/shidu.values"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@+id/fabu"
+            android:layout_below="@+id/city"
+            android:text="70%"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/quality"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/w7"
+            android:layout_marginRight="89dp"
+            android:text="良"
+            android:textColor="#FFFFFFFF"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/shidu"
+            android:layout_toLeftOf="@+id/quality"
+            android:text="星期二"
+            android:textColor="#FFFFFFFF"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/range"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/w_condition"
+            android:layout_alignLeft="@+id/date"
+            android:layout_alignStart="@+id/date"
+            android:layout_marginBottom="-224dp"
+            android:text="25℃ ~ 30℃"
+            android:textColor="#FFFFFFFF"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/w_condition"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/date"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="224dp"
+            android:text="晴"
+            android:textColor="#FFFFFFFF"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/w_wind"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/date"
+            android:layout_alignStart="@+id/date"
+            android:layout_below="@+id/w_condition"
+            android:text="风力10级"
+            android:textColor="#FFFFFFFF"
+            android:textSize="23dp" />
+
+        <ImageView
+            android:id="@+id/w_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignLeft="@+id/city"
+            android:layout_alignStart="@+id/city"
+            android:layout_below="@+id/shidu"
+            android:src="@drawable/w5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="103dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="190dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="5日星期三"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="190dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="6日星期四"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="190dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="7日星期五"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="380dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/cloud" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="380dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/sun" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="380dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/cloud" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="103dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="20℃~25℃"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="23℃~29℃"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="21℃~26℃"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="103dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="多云"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="晴"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="多云"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="103dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3-4级"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3-4级"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3-4级"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
